@@ -1,0 +1,53 @@
+<!-- Agritech Market Match Platform Homepage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriMatch</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <header>
+    <h1>AgriMatch</h1>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Post Offer</a>
+      <a href="#">Market Prices</a>
+      <a href="#">Log Out</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Market Price Ticker</h2>
+      <div id="ticker"></div>
+    </section>
+
+    <section id="map">
+      <h2>Nearby Markets & Buyers</h2>
+      <div id="mapid"></div>
+    </section>
+
+    <section id="offer-form">
+      <h2>Post Your Produce</h2>
+      <form id="listingForm">
+        <label for="crop">Crop:</label>
+        <select id="crop"></select>
+        <label for="quantity">Quantity (kg):</label>
+        <input type="number" id="quantity" required />
+        <label for="price">Asking Price (KSh):</label>
+        <input type="number" id="price" required />
+        <label for="location">Your Location:</label>
+        <input type="text" id="location" placeholder="latitude,longitude" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
